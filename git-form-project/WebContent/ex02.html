@@ -46,10 +46,31 @@
 					<div class="tab-pane container" id="menu2">
 						<!-- 시(도) 선택버튼 -->
 						<div>
-							<button type="button" id="btnSeoul"
-								class="btn btn-outline-secondary">서울</button>
-							<button type="button" class="btn btn-outline-info">인천</button>
-
+							<div>
+								<button type="button" id="Sl" class="btn btn-outline-primary">서울</button>
+								<button type="button" id="Ic" class="btn btn-outline-primary">인천</button>
+								<button type="button" id="Gi" class="btn btn-outline-primary">경기</button>
+								<button type="button" id="Gn" class="btn btn-outline-primary">강원</button>
+								<button type="button" id="Sg" class="btn btn-outline-primary">세종</button>
+							</div>
+							<div>
+								<button type="button" id="Cm" class="btn btn-outline-secondary">충남</button>
+								<button type="button" id="Ck" class="btn btn-outline-secondary">충북</button>
+								<button type="button" id="Dn" class="btn btn-outline-secondary">대전</button>
+								<button type="button" id="Du" class="btn btn-outline-secondary">대구</button>
+								<button type="button" id="Gb" class="btn btn-outline-secondary">경북</button>
+							</div>
+							<div>
+								<button type="button" id="Gm" class="btn btn-outline-warning">경남</button>
+								<button type="button" id="Jk" class="btn btn-outline-warning">전북</button>
+								<button type="button" id="Jm" class="btn btn-outline-warning">전남</button>
+								<button type="button" id="Un" class="btn btn-outline-warning">울산</button>
+								<button type="button" id="Bn" class="btn btn-outline-warning">부산</button>
+							</div>
+							<div>
+								<button type="button" id="Gj" class="btn btn-outline-danger">광주</button>
+								<button type="button" id="Jj" class="btn btn-outline-danger">제주</button>
+							</div>
 						</div>
 						<div>
 							<div class="form-group">
@@ -100,36 +121,335 @@
 	</div>
 </body>
 <script>
-	$('#btnSeoul').click(function() {
-		console.log('#btnSeoul click');
+	$('#Sl').click(function() {
+		console.log('서울 클릭시');
 		$('#targetLable').text('서울');
-		let str = '';
-		str += '●강남구';
-		str += '\t	●강동구'; //\t 탭
-		str += '\n●강북구'; //\n 띄어쓰기
-		str += '\t	●강서구';
-		str += '\n●관악구';
-		str += '\t	●광진구';
-		str += '\n●구로구';
-		str += '\t	●금천구';
-		str += '\n●노원구';
-		str += '\t	●도봉구';
-		str += '\n●동대문구';
-		str += '\t●동작구';
-		str += '\n●마포구';
-		str += '\t	●서대문구';
-		str += '\n●서초구';
-		str += '\t	●성동구';
-		str += '\n●성북구';
-		str += '\t	●양천구';
-		str += '\n●영등포구';
-		str += '\t●용산구';
-		str += '\n●종로구';
-		str += '\t	●중구';
-		str += '\n●중랑구';
-		$('#targetTextarea').val(str);
-	})
-
+		let Slarea = '';
+		Slarea += '●강남구';
+		Slarea += '\t	●강동구'; //\t 탭
+		Slarea += '\n●강북구'; //\n 띄어쓰기
+		Slarea += '\t	●강서구';
+		Slarea += '\n●관악구';
+		Slarea += '\t	●광진구';
+		Slarea += '\n●구로구';
+		Slarea += '\t	●금천구';
+		Slarea += '\n●노원구';
+		Slarea += '\t	●도봉구';
+		Slarea += '\n●동대문구';
+		Slarea += '\t●동작구';
+		Slarea += '\n●마포구';
+		Slarea += '\t	●서대문구';
+		Slarea += '\n●서초구';
+		Slarea += '\t	●성동구';
+		Slarea += '\n●성북구';
+		Slarea += '\t	●양천구';
+		Slarea += '\n●영등포구';
+		Slarea += '\t●용산구';
+		Slarea += '\n●종로구';
+		Slarea += '\t	●중구';
+		Slarea += '\n●중랑구';
+		$('#targetTextarea').val(Slarea);
+	});
+	$('#Ic').click(function() {
+		console.log('인천 클릭시');
+		$('#targetLable').text('인천');
+		let Icarea = '';
+		Icarea += '◎강화군';
+		Icarea += '\t 	◎계양구';
+		Icarea += '\n◎남동구';
+		Icarea += '\t	◎동구';
+		Icarea += '\n◎미추홀구';
+		Icarea += '\t◎부평구';
+		Icarea += '\n◎서구';
+		Icarea += '\t	◎연수구';
+		Icarea += '\n◎옹진군';
+		Icarea += '\t	◎중구';
+		$('#targetTextarea').val(Icarea);
+	});
+	$('#Gi').click(function() {
+		console.log('경기 클릭시');
+		$('#targetLable').text('경기');
+		let Giarea = '';
+		Giarea += '●가평군';
+		Giarea += '\t		●고양시 덕양구';
+		Giarea += '\n●고양시 일산구';
+		Giarea += '\t●고양시 일산동구';
+		Giarea += '\n●고양시 일산서구';
+		Giarea += '\t●고양시';
+		Giarea += '\n●과천시';
+		Giarea += '\t		●광명시';
+		Giarea += '\n●광주시';
+		Giarea += '\t		●구리시';
+		Giarea += '\n●군포시';
+		Giarea += '\t		●김포시';
+		Giarea += '\n●남양주시';
+		Giarea += '\t	●동두천시';
+		Giarea += '\n●부천시';
+		Giarea += '\t		●성남시 분당구';
+		Giarea += '\n●성남시 수정구';
+		Giarea += '\t●성남시 중원구';
+		Giarea += '\n●성남시';
+		Giarea += '\t		●수원시 권선구';
+		Giarea += '\n●수원시 영통구';
+		Giarea += '\t●수원시 장안구';
+		Giarea += '\n●수원시 팔달구';
+		Giarea += '\n●시흥시';
+		Giarea += '\t		●안산시 단원구';
+		Giarea += '\n●안산시 상록구';
+		Giarea += '\t●안산시';
+		Giarea += '\n●안성시';
+		Giarea += '\t		●안양시 동안구';
+		Giarea += '\n●안양시 만안구';
+		Giarea += '\t●안양시';
+		Giarea += '\n●양주군';
+		Giarea += '\t		●양주시';
+		Giarea += '\n●양평군';
+		Giarea += '\t		●여주시';
+		Giarea += '\n●연천군';
+		Giarea += '\t		●오산시';
+		Giarea += '\n●용인시 기훙구';
+		Giarea += '\t●용인시 수지구';
+		Giarea += '\n●용인시 처인구';
+		Giarea += '\t●용인시';
+		Giarea += '\n●의왕시';
+		Giarea += '\t		●의정부시';
+		Giarea += '\n●이천시';
+		Giarea += '\t		●파주시';
+		Giarea += '\n●평택시';
+		Giarea += '\t		●포천군';
+		Giarea += '\n●포천시';
+		Giarea += '\t		●하남시';
+		Giarea += '\n●화성시';
+	
+		$('#targetTextarea').val(Giarea);
+	});
+	
+	$('#Gn').click(function(){
+		console.log('강원 클릭시');
+		$('#targetLable').text('강원');
+		let Gnarea='';
+		Gnarea += '◇강릉시';
+		Gnarea += '\t	◇고성군';
+		Gnarea += '\n◇동해시';
+		Gnarea += '\t	◇삼척시';
+		Gnarea += '\n◇속초시';
+		Gnarea += '\t	◇양구군';
+		Gnarea += '\n◇양양군';
+		Gnarea += '\t	◇영월군';
+		Gnarea += '\n◇원주시';
+		Gnarea += '\t	◇인제군';
+		Gnarea += '\n◇정선군';
+		Gnarea += '\t	◇철원군';
+		Gnarea += '\n◇춘천시';
+		Gnarea += '\t	◇태백시';
+		Gnarea += '\n◇평창군';
+		Gnarea += '\t	◇흥천군';
+		Gnarea += '\n◇화천군';
+		Gnarea += '\t	◇횡성군';																				
+		$('#targetTextarea').val(Gnarea);
+	});
+	$('#Sg').click(function(){
+		console.log('세종 클릭시');
+		$('#targetLable').text('세종');
+		let Sgarea='';
+		Sgarea += '◆세종';
+		$('#targetTextarea').val(Sgarea);
+	});
+	$('#Cm').click(function(){
+		console.log('충남 클릭시');
+		$('#targetLable').text('충남');
+		let Cmarea='';
+		Cmarea += '□계룡시';
+		Cmarea += '\t		□공주시';
+		Cmarea += '\n□금산군';
+		Cmarea += '\t		□논산시';
+		Cmarea += '\n□당진군';
+		Cmarea += '\t		□당진시';
+		Cmarea += '\n□보령시';
+		Cmarea += '\t		□부여군';
+		Cmarea += '\n□서산시';
+		Cmarea += '\t		□서천군';
+		Cmarea += '\n□아산시';
+		Cmarea += '\t		□연기군';
+		Cmarea += '\n□예산군';
+		Cmarea += '\t		□천안시 동남구';
+		Cmarea += '\n□천안시 서북구';
+		Cmarea += '\t□천안시';
+		Cmarea += '\n□청양군';
+		Cmarea += '\t		□태안군';
+		Cmarea += '\n□흥성군';
+		$('#targetTextarea').val(Cmarea);
+	});
+	$('#Ck').click(function(){
+		console.log("충북 클릭시");
+		$('#targetLable').text('충북');
+		let Ckarea='';
+		Ckarea += '■괴산군';
+		Ckarea += '\t		■단양군';
+		Ckarea += '\n■보은군';
+		Ckarea += '\t		■영동군';
+		Ckarea += '\n■옥천군';
+		Ckarea += '\t		■음성군';
+		Ckarea += '\n■제천시';
+		Ckarea += '\t		■증평군';
+		Ckarea += '\n■진천군';
+		Ckarea += '\t		■청원군';
+		Ckarea += '\n■청주시 상당구';
+		Ckarea += '\t■청주시 서원구';
+		Ckarea += '\n■청주시 청원구';
+		Ckarea += '\t■청주시 흥덕구';
+		Ckarea += '\n■청주시';
+		Ckarea += '\t		■충주시';
+		$('#targetTextarea').val(Ckarea);
+	});
+	$('#Dn').click(function(){
+		console.log('대전 클릭시');
+		$('#targetLable').text('대전');
+		let Dnarea='';
+		Dnarea += '△ 대덕구';
+		Dnarea += '\t△동구';
+		Dnarea += '\n△서구';
+		Dnarea += '\t	△유성구';
+		Dnarea += '\n△중구';
+		
+		$('#targetTextarea').val(Dnarea);
+	});
+	$('#Du').click(function(){
+		console.log('대구 클릭시');
+		$('#targetLable').text('대구');
+		let Duarea='';
+		Duarea += '▲남구';
+		Duarea += '\t	▲달서구';
+		Duarea += '\n▲달성군';
+		Duarea += '\t	▲동구';
+		Duarea += '\n▲북구';
+		Duarea += '\t	▲서구';
+		Duarea += '\n▲수정구';
+		Duarea += '\t	▲중구';
+		$('#targetTextarea').val(Duarea);
+	});
+	$('#Gb').click(function(){
+		console.log('경북 클릭시');
+		$('#targetLable').text('경북');
+		let Gbarea='';
+		Gbarea='▽문경시';
+		Gbarea +='\t 		▽봉화군';
+		Gbarea +='\n▽상주시';
+		Gbarea +='\t		▽성주군';
+		Gbarea +='\n▽안동시';
+	 	Gbarea +='\t		▽영덕군';
+		Gbarea +='\n▽영양군';
+		Gbarea +='\t		▽영주시';
+		Gbarea +='\n▽영천시';
+		Gbarea +='\t		▽예천군';
+		Gbarea +='\n▽울릉군';
+		Gbarea +='\t		▽울진군';
+		Gbarea +='\n▽의성군';
+		Gbarea +='\t		▽청도군';
+		Gbarea +='\n▽청송군';
+		Gbarea +='\t		▽칠곡군';
+		Gbarea +='\n▽포항시 남구';
+		Gbarea +='\t	▽포항시 북구';
+		Gbarea +='\n▽포항시';
+		$('#targetTextarea').val(Gbarea);
+	});
+	$('#Gm').click(function(){
+		console.log('경남 클릭시');
+		$('targetLable').text('경남');
+		let Gmarea = '';
+		Gmarea += '▼거제시';
+		Gmarea += '\t 			▼거창군';
+		Gmarea += '\n▼고성군';
+		Gmarea += '\t			▼김해시';
+		Gmarea += '\n▼남해군';
+		Gmarea += '\t			▼밀양시';
+		Gmarea += '\n▼사천시';
+		Gmarea += '\t			▼산청군';
+		Gmarea += '\n▼양산시';
+		Gmarea += '\t			▼의령군';
+		Gmarea += '\n▼진주시';
+		Gmarea += '\t			▼창녕군';
+		Gmarea += '\n▼창원시 마산합포구';
+		Gmarea += '\t▼창원시 마산회원구';
+		Gmarea += '\n▼창원시 성산구';
+		Gmarea += '\t	▼창원시 진해구';
+		Gmarea += '\n▼창원시';
+		Gmarea += '\t			▼통영시';
+		Gmarea += '\n▼하동군';
+		Gmarea += '\t			▼함안군';
+		Gmarea += '\n▼함양군';
+		Gmarea += '\t			▼합천군';	
+		$('#targetTextarea').val(Gmarea);
+	});
+	$('#Jk').click(function(){
+		console.log('전북 클릭시');
+		$('#targetLable').text('전북');
+		let Jkarea = '';
+		Jkarea += '♤고창군';
+		Jkarea += '\t		♤군산시';
+		Jkarea += '\n♤김제시';
+		Jkarea += '\t		♤남원시';
+		Jkarea += '\n♤무주군';
+		Jkarea += '\t		♤부안군';
+		Jkarea += '\n♤순창군';
+		Jkarea += '\t		♤완주군';
+		Jkarea += '\n♤익산시';
+		Jkarea += '\t		♤임실군';
+		Jkarea += '\n♤장수군';
+		Jkarea += '\t		♤전주시 덕진구';
+		Jkarea += '\n♤전주시 완산군';
+		Jkarea += '\t♤전주시';
+		Jkarea += '\n♤정읍시';
+		Jkarea += '\t		♤진안군';
+		$('#targetTextarea').val(Jkarea);
+	});
+	$('#Jm').click(function(){
+		console.log('전남 클릭시');
+		$('#targetLable').text('전남클릭시');
+		let Jmarea='';
+		Jmarea +='♠강진군';
+		Jmarea +='\t		♠고흥군';
+		Jmarea +='\n♠곡성군';
+		Jmarea +='\t		♠광양시';
+		Jmarea +='\n♠구례군';
+		Jmarea +='\t		♠나주시';
+		Jmarea +='\n♠담양군';
+		Jmarea +='\t		♠목포시';
+		Jmarea +='\n♠무안군';
+		Jmarea +='\t		♠보성군';
+		Jmarea +='\n♠순천시';
+		Jmarea +='\t		♠신안군';
+		Jmarea +='\n♠여수시';
+		Jmarea +='\t		♠영광군';
+		Jmarea +='\n♠영얌군';
+		Jmarea +='\t		♠완도군';
+		Jmarea +='\n♠장성군';
+		Jmarea +='\t		♠장흥군';
+		Jmarea +='\n♠진도군';
+		Jmarea +='\t		♠함평군';
+		Jmarea +='\n♠해남군';
+		Jmarea +='\t		♠화순군';
+		$('#targetTextarea').val(Jmarea);
+	});
+	$('#Un').click(function(){
+		console.log('울산 클릭시');
+		$('targetLable').text('울산');
+		let Unarea = '';
+		Unarea += '♧남구'
+		Unarea +='\t 	♧동구';
+		Unarea += '\n♧북구';
+		Unarea += '\t 	♧을주군';
+		Unarea += '\n♧중구';
+		$('#targetTextarea').val(Unarea);
+	});
+	$('#Bn').click(function(){
+		console.log('부산 클릭시');
+		$('targetLable').text('부산');
+		let Bnarea = '';
+		
+		$('#targetTextarea').val(Bnarea);
+	});
+	
 	$(document).ready(function() {
 		// Activate Carousel
 		$("#myCarousel").carousel();
