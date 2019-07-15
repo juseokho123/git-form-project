@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title></title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- https://marymond.kr/main/index 로그인 클릭시 뒷배경 블러처리 및 로그인 모달 -->
+<div class="container">
+  <h2>https://marymond.kr/main/index 로그인 클릭시 뒷배경 블러처리 및 로그인 모달</h2>
+  <!-- Button to Open the Modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-backdrop="static">
+    Open modal
+  </button>
+	<!-- The Modal -->
+  	<div class="modal" id="myModal">
+    	<div class="modal-dialog">
+     		<div class="modal-content">
+        		<!-- Modal Header -->
+        		<div class="modal-header">
+        			<h4 class="modal-title">로그인</h4>
+          			<button type="button" class="close" data-dismiss="modal">&times;</button>
+        		</div>
+        		
+        		<!-- Modal body -->
+        		<div class="modal-body">
+        			<a href="https://www.facebook.com/login.php?skip_api_login=1&api_key=1876012409282358&kid_directed_site=0&app_id=1876012409282358&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fv2.7%2Fdialog%2Foauth%3Fapp_id%3D1876012409282358%26channel_url%3Dhttps%253A%252F%252Fstaticxx.facebook.com%252Fconnect%252Fxd_arbiter.php%253Fversion%253D44%2523cb%253Df33805ec99279e4%2526domain%253Dmarymond.kr%2526origin%253Dhttps%25253A%25252F%25252Fmarymond.kr%25252Ff14cbcdd7f9d4a%2526relation%253Dopener%26client_id%3D1876012409282358%26display%3Dpopup%26domain%3Dmarymond.kr%26e2e%3D%257B%257D%26fallback_redirect_uri%3Dhttps%253A%252F%252Fmarymond.kr%252Fmain%252Findex%26locale%3Dko_KR%26origin%3D1%26redirect_uri%3Dhttps%253A%252F%252Fstaticxx.facebook.com%252Fconnect%252Fxd_arbiter.php%253Fversion%253D44%2523cb%253Df7f18a1c57382%2526domain%253Dmarymond.kr%2526origin%253Dhttps%25253A%25252F%25252Fmarymond.kr%25252Ff14cbcdd7f9d4a%2526relation%253Dopener%2526frame%253Df10b8e383ad1e18%26response_type%3Dtoken%252Csigned_request%26scope%3Demail%252Cuser_friends%252Cpublic_profile%252C%26sdk%3Djoey%26version%3Dv2.7%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D65116eeb-1249-46ae-a172-5336d125ee5b&cancel_url=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D44%23cb%3Df7f18a1c57382%26domain%3Dmarymond.kr%26origin%3Dhttps%253A%252F%252Fmarymond.kr%252Ff14cbcdd7f9d4a%26relation%3Dopener%26frame%3Df10b8e383ad1e18%26error%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied&display=popup&locale=ko_KR">
+          			<button type="submit" class="btn btn-primary" style="WIDTH: 300pt; HEIGHT: 30pt">facebook 로그인</button></a>
+        		</div>
+        		<div class="modal-body">
+					<a href="https://nid.naver.com/oauth2.0/authorize?response_type=code&client_id=pC1JPiTcXx81AxPdQnMe&state=664c91da153796368aebb199219f699d&redirect_uri=https%3A%2F%2Fmarymond.kr%2Fsns_process%2Fnaveruserck">
+          			<input type="submit" class="btn btn-success" style="WIDTH: 300pt; HEIGHT: 30pt" value="naver 로그인"></a>
+        		</div>
+        		<div class="modal-body">
+					<a href="https://accounts.kakao.com/login?continue=https://kauth.kakao.com/oauth/authorize?redirect_uri%3Dkakaojs%26response_type%3Dcode%26state%3Dqx8k9g9fa6zb1kwepcmui%26proxy%3DeasyXDM_Kakao_eqoyd40qhmg_provider%26ka%3Dsdk%252F1.25.6%2520os%252Fjavascript%2520lang%252Fko-KR%2520device%252FWin32%2520origin%252Fhttps%25253A%25252F%25252Fmarymond.kr%26origin%3Dhttps%253A%252F%252Fmarymond.kr%26client_id%3Dcd336b2ee4f67e7d46dd18228f06cac3">
+          			<input type="submit" class="btn btn-warning" style="WIDTH: 300pt; HEIGHT: 30pt" value="kakao 로그인"></a>
+        		</div>
+        		<div class="modal-body">
+					<h5>아이디 로그인</h5>
+					<input type="text" size=40 placeholder="아이디를 입력해주세요"><br>
+					<input type="text" size= 40 class="text_l" placeholder="비밀번호를 입력해주세요">
+				</div>
+				
+        		<div class="modal-body">
+          			<input type="button" style="WIDTH: 300pt; HEIGHT: 30pt"  value="로그인">
+        		</div>
+        		<div class="modal-body">																	
+          			<input type="button" style="WIDTH: 300pt; HEIGHT: 30pt; border:none; background-color:transparent" value="아이디/비밀번호 찾기" readonly>
+          			<input type="button" style="WIDTH: 300pt; HEIGHT: 30pt; border:none; background-color:transparent" value="비회원주문조회" readonly>
+        		</div>
+        		<div class="modal-body">																	
+          			<h5>마리몬드의 회원이 되시면 적립금 3,000원과 <br>첫 구매 10% 할인 쿠폰을 드립니다.</h5>
+          			<a href="https://marymond.kr/member/register?join_type=member&init=1"><button type="button" class="btn btn-outline-danger" style="WIDTH: 300pt; HEIGHT: 30pt;">마리몬드 회원가입</button></a>
+        		</div>  
+        		    
+      		</div>
+    	</div>
+  	</div>
+</div>
+
+</body>
+</html>
