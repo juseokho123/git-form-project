@@ -160,6 +160,21 @@
 	console.log(year);
 	console.log(month);
 	console.log(day);
+	
+	let beginDate= d;
+	let endDate = d;
+	$('#btnWeek').click(function(){
+		console.log('btnWeek Å¬¸¯½Ã');
+		endDate.setDate(beginDate.getDate()+ 7); 
+		$('#endDate').val(`${endDate.getFullYear()}-${endDate.getMonth()}-${endDate.getDate()}`);
+	});
+	$('btnMonth').click(function(){
+
+	});
+	$('btn3Month').click(function(){
+
+	});
+	
 	$('#beginDate').val(`${year}-${month}-${day}`);
 	$('#endDate').val(`${year}-${month}-${day}`);
 	$('#tip').popover();
