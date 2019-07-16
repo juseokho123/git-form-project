@@ -73,7 +73,7 @@
 					<a id='tip' href="#" data-toggle="popover" data-content="Tip버튼에 자세한 설명이 표시됩니다. 특화과정은 내일배움카드,국가기간전략산업 유형을 선택시에 활성화 됩니다.">
 					<span class="badge badge-dark">tip</span></a><br><br>
 					훈련지역 &nbsp;&nbsp;
-					<select>
+					<select id="area" style="WIDTH: 100pt;" onchange="areaChange()">
 						<option value="">시도</option>
 						<option value="se">서울</option>
 						<option value="bu">부산</option>
@@ -92,7 +92,9 @@
 						<option value="kb">경북</option>
 						<option value="kn">경남</option>
 						<option value="jj">제주</option>
-
+					</select>
+					<select id="city" style="WIDTH: 100pt;">
+						<option>시군구</option>
 					</select>
 					<div>
 						<input id="beginDate" type="text">
@@ -183,11 +185,13 @@
 		</div>
 	</div>
 </body>
-
+<!-- 지역을 선택하면 그 지역에 해당되는 시군도가 나오게 해보자-->
 <script>
+function areaChange(){
+	let
+};
 
 </script>
-
 <!--훈련유형 선택시 특화과정 선택하는 코딩-->
 <script>
 $('#sp').attr('disabled', true);
@@ -196,10 +200,8 @@ function kChange(){
 		$('#sp').attr('disabled', false);
 	}else if($('#kind').val() === 'b'){
 		$('#sp').attr('disabled', true);
-	}
-	
+	}	
 }
-		
 </script>
 <!-- 날짜 선택하는 코딩 -->
 <script>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Test Page</title>
+
+<script type="text/javascript">
+function doChange(srcE, targetId){
+    let val = srcE.options[srcE.selectedIndex].value;
+    let targetE = document.getElementById(targetId);
+    removeAll(targetE);
+
+    if(val == 'se'){
+        addOption('강남구', targetE);
+        addOption('강동구', targetE);
+        addOption('강북구', targetE);
+        addOption('강서구', targetE);
+        addOption('관악구', targetE);
+        addOption('광진구', targetE);
+        addOption('구로구', targetE);
+        addOption('금천구', targetE);
+        addOption('노원구', targetE);
+        addOption('도봉구', targetE);
+        addOption('동대문구', targetE);
+        addOption('동작구', targetE);
+        addOption('마포구', targetE);
+        addOption('서대문구', targetE);
+        addOption('서초구', targetE);
+        addOption('성동구', targetE);
+        addOption('성북구', targetE);
+        addOption('송파구', targetE);
+        addOption('양천구', targetE);
+        addOption('영동포구', targetE);
+        addOption('용상구', targetE);
+        addOption('은평구', targetE);
+        addOption('종로구', targetE);
+        addOption('중구', targetE);
+        addOption('중랑구', targetE);
+  	}else if(val == 'bu'){
+        addOption('강서구', targetE);
+        addOption('금정구', targetE);
+        addOption('기장군', targetE);
+        addOption('남구', targetE);
+        addOption('동구', targetE);
+        addOption('동래구', targetE);
+        addOption('부산진구', targetE);
+        addOption('북구', targetE);
+        addOption('사상구', targetE);
+        addOption('사하구', targetE);
+        addOption('서구', targetE);
+        addOption('수영구', targetE);
+        addOption('연제구', targetE);
+        addOption('영도구', targetE);
+        addOption('중구', targetE);
+        addOption('해운대구', targetE);
+    }else if(val == 'bu'){
+        addOption('강서구', targetE);
+        addOption('금정구', targetE);
+        addOption('기장군', targetE);
+        addOption('남구', targetE);
+        addOption('동구', targetE);
+        addOption('동래구', targetE);
+        addOption('부산진구', targetE);
+        addOption('북구', targetE);
+        addOption('사상구', targetE);
+        addOption('사하구', targetE);
+        addOption('서구', targetE);
+        addOption('수영구', targetE);
+        addOption('연제구', targetE);
+        addOption('영도구', targetE);
+        addOption('중구', targetE);
+        addOption('해운대구', targetE);
+    }else if(val =="da"){
+    	addOption('남구', targetE);
+    	addOption('달서구', targetE);
+    	addOption('달성군', targetE);
+    	addOption('동구', targetE);
+    	addOption('북구', targetE);
+    	addOption('서구', targetE);
+    	addOption('수성구', targetE);
+    	addOption('중구', targetE);  	
+    }else if(val =="in"){
+    	addOption('강화군', targetE);
+    	addOption('계양구', targetE);
+    	addOption('남동구', targetE);
+    	addOption('동구', targetE);
+    	addOption('미추홀구', targetE);
+    	addOption('부평구', targetE);
+    	addOption('서구', targetE);
+    	addOption('연수구', targetE);
+    	addOption('옹진군', targetE);
+    	addOption('중구', targetE);
+    }
+}
+
+function addOption(value, e){
+    var o = new Option(value);
+    try{
+        e.add(o);
+    }catch(ee){
+        e.add(o, null);
+    }
+}
+
+function removeAll(e){
+    for(var i = 0, limit = e.options.length; i < limit - 1; ++i){
+        e.remove(1);
+    }
+}
+</script>
+
+</head>
+<body>
+<form action="#">
+  <select style="WIDTH: 100pt;" name="selOne" id="selOne" onchange="doChange(this, 'selTwo')">
+		<option value="">시도</option>
+		<option value="se">서울</option>
+		<option value="bu">부산</option>
+		<option value="da">대구</option>
+		<option value="in">인천</option>
+		<option value="gae">광주</option>
+		<option value="dj">대전</option>
+		<option value="us">울산</option>
+		<option value="sj">세종</option>
+		<option value="gi">경기</option>
+		<option value="gw">강원</option>
+		<option value="cb">충북</option>
+		<option value="cn">충남</option>
+		<option value="jb">전북</option>
+		<option value="jn">전남</option>
+		<option value="kb">경북</option>
+		<option value="kn">경남</option>
+		<option value="jj">제주</option>
+	</select>
+    <select name="selTwo" id="selTwo">
+        <option value="default">시군도</option>
+    </select>
+</form>
+</body>
+</html>
