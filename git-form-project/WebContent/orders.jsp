@@ -20,8 +20,6 @@
 	request.setCharacterEncoding("EUC-KR");
 	String beginDate = request.getParameter("beginDate");
 	String endDate = request.getParameter("endDate");
-	String orderDate = request.getParameter("orderDate");
-	System.out.println(orderDate +"<-orderDate");
 	PreparedStatement pstmt = null;
 	Class.forName("com.mysql.jdbc.Driver");
 	
@@ -50,7 +48,7 @@
 	<tr>
 		<td><%=rs.getString("order_date") %></td>
 		<td><%=rs.getString("amout") %></td>
-		<td><a href="<%=request.getContextPath() %>/orders_pro.jsp?send_id=<%=rs.getString("no")%>">예매하기</a>
+		<td><a href="<%=request.getContextPath() %>/orders_pro.jsp?send_date=<%=rs.getString("order_date")%>">예매하기</a>
 		</td>
 	</tr>
 	<%
