@@ -446,8 +446,42 @@
 		console.log('부산 클릭시');
 		$('targetLable').text('부산');
 		let Bnarea = '';
-		
+		Bnarea +='☆강서구';
+		Bnarea +='\t		☆금정구';
+		Bnarea +='\n☆기장군';
+		Bnarea +='\t		☆남구';
+		Bnarea +='\n☆동구';
+		Bnarea +='\t		☆동래구';
+		Bnarea +='\n☆부산진구';
+		Bnarea +='\t	☆북구';
+		Bnarea +='\n☆사상구';
+		Bnarea +='\t		☆사하구';
+		Bnarea +='\n☆서구';
+		Bnarea +='\t		☆수영구';
+		Bnarea +='\n☆연제구';
+		Bnarea +='\t		☆영도구';
+		Bnarea +='\n☆중구';
+		Bnarea +='\t		☆해운대구';	
 		$('#targetTextarea').val(Bnarea);
+	});
+	$('#Gj').click(function(){
+		console.log("광주 클릭시");
+		$('#targetLable').text('광주');
+		let Gjarea = '';
+		Gjarea += '★광산구';
+		Gjarea += '\t		★남구';
+		Gjarea += '\n★동구';
+		Gjarea += '\t		★북구';
+		Gjarea += '\n★서구';
+		$('#targetTextarea').val(Gjarea);
+	});
+	$('#Jj').click(function(){
+		console.log("제주 클릭시");
+		$('#targetLable').text('제주');
+		let Jjarea = '';
+		Jjarea += '⊙서귀포시';
+		Jjarea += '\t	⊙제주시';
+		$('#targetTextarea').val(Jjarea);
 	});
 	
 	$(document).ready(function() {
