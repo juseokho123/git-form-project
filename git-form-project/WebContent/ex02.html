@@ -40,9 +40,24 @@
 						href="#menu2">Menu 2</a></li>
 				</ul>
 
-				<!-- Tab panes -->
+				<!-- 첫번째 탭 -->
 				<div class="tab-content">
-					<div class="tab-pane container" id="menu1">...</div>
+					<div class="tab-pane container" id="menu1">
+					
+					<a id='tip' href="#" data-toggle="popover" data-content="Tip버튼에 자세한 설명이 표시됩니다. 특화과정은 내일배움카드,국가기간전략산업 유형을 선택시에 활성화 됩니다.">
+					<span class="badge badge-dark">tip</span></a>
+					<div>
+						<input id="beginDate" type="date">
+						<input id="endDate" type="date">
+						<button id="btnWeek">1주일</button>
+						<button id="btnMonth">1개월</button>
+						<button id="btn3Month">3개월</button>
+					
+					</div>
+					
+					
+					</div>
+					<!-- 두번째 탭 -->
 					<div class="tab-pane container" id="menu2">
 						<!-- 시(도) 선택버튼 -->
 						<div>
@@ -121,6 +136,10 @@
 	</div>
 </body>
 <script>
+	let d = new Date();
+	
+	
+	$('#tip').popover();
 	$('#Sl').click(function() {
 		console.log('서울 클릭시');
 		$('#targetLable').text('서울');
