@@ -38,17 +38,62 @@
 				<!-- Nav tabs -->
 				<ul class="nav nav-tabs">
 					<li class="nav-item"><a class="nav-link" data-toggle="tab"
-						href="#menu1">Menu 1</a></li>
+						href="#menu1">조건 검색</a></li>
 					<li class="nav-item"><a class="nav-link" data-toggle="tab"
-						href="#menu2">Menu 2</a></li>
+						href="#menu2">지역 검색</a></li>
 				</ul>
 
 				<!-- 첫번째 탭 -->
 				<div class="tab-content">
 					<div class="tab-pane container" id="menu1">
+					<h4 class="font-weight-bolder">훈련과정 검색</h4>
+					훈련기관 &nbsp;&nbsp;<input style="WIDTH: 400pt; type="text"><br><br>
+					훈련과정 &nbsp;&nbsp;<input style="WIDTH: 400pt; type="text"><br><br>
+					훈련유형&nbsp;&nbsp;
+					<select style="WIDTH: 130pt;" id="kind" onchange="kChange()">
+						<option value='b'>전체</option>
+						<option value='a'>내일배움카드(구직자)</option>
+						<option value='a'>국가기간전략산업직종</option>
+						<option value='b'>컨소시엄 채용예정자</option>
+						<option value='b'>폴리텍대학훈련</option>
+						<option value='b'>청년취업아카데미</option>
+						<option value='b'>장애인직업능력지원훈련</option>
+						<option value='b'>건설일용근로자기능향상</option>
+						<option value='b'>지역맞춤형일자리창출</option>
+						<option value='b'>지역구직자</option>	
+					</select>
+					&nbsp;&nbsp;&nbsp;&nbsp;특화과정
+					<select style="WIDTH: 180pt;" id="sp">
+						<option>전체</option>
+						<option>일반고특화과정</option>
+						<option>4차산업혁명선도인력양성과정</option>
+						<option>중장년특화과정</option>
+					</select>
 					
 					<a id='tip' href="#" data-toggle="popover" data-content="Tip버튼에 자세한 설명이 표시됩니다. 특화과정은 내일배움카드,국가기간전략산업 유형을 선택시에 활성화 됩니다.">
-					<span class="badge badge-dark">tip</span></a>
+					<span class="badge badge-dark">tip</span></a><br><br>
+					훈련지역 &nbsp;&nbsp;
+					<select>
+						<option value="">시도</option>
+						<option value="se">서울</option>
+						<option value="bu">부산</option>
+						<option value="da">대구</option>
+						<option value="in">인천</option>
+						<option value="gae">광주</option>
+						<option value="dj">대전</option>
+						<option value="us">울산</option>
+						<option value="sj">세종</option>
+						<option value="gi">경기</option>
+						<option value="gw">강원</option>
+						<option value="cb">충북</option>
+						<option value="cn">충남</option>
+						<option value="jb">전북</option>
+						<option value="jn">전남</option>
+						<option value="kb">경북</option>
+						<option value="kn">경남</option>
+						<option value="jj">제주</option>
+
+					</select>
 					<div>
 						<input id="beginDate" type="text">
 						<input id="endDate" type="text" >
@@ -138,6 +183,25 @@
 		</div>
 	</div>
 </body>
+
+<script>
+
+</script>
+
+<!--훈련유형 선택시 특화과정 선택하는 코딩-->
+<script>
+$('#sp').attr('disabled', true);
+function kChange(){
+	if($('#kind').val() === 'a'){
+		$('#sp').attr('disabled', false);
+	}else if($('#kind').val() === 'b'){
+		$('#sp').attr('disabled', true);
+	}
+	
+}
+		
+</script>
+<!-- 날짜 선택하는 코딩 -->
 <script>
 	$('#beginDate').datepicker({
 		showOn: "button",
@@ -179,6 +243,7 @@
 	$('#endDate').val(`${year}-${month}-${day}`);
 	$('#tip').popover();
 </script>
+<!-- 지역 클릭시 나오는 시(도) 코딩-->
 <script>
 	$('#Sl').click(function() {
 		console.log('서울 클릭시');
@@ -542,6 +607,11 @@
 		Jjarea += '\t	⊙제주시';
 		$('#targetTextarea').val(Jjarea);
 	});
+</script>
+
+
+<!-- 탭코딩 -->
+<script>
 	
 	$(document).ready(function() {
 		// Activate Carousel
